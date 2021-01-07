@@ -1,0 +1,9 @@
+#  密码为空
+- data: {"mobilephone": 15006008111, "pwd": ""}
+  expect: {"status": 0, "code": "20103", "data": None, "msg": "密码不能为空"}
+#  手机号码为空
+- data: {"mobilephone": "", "pwd": "85846215"}
+  expect: {"status": 0, "code": "20103", "data": None, "msg": "手机号不能为空"}
+#  密码大于18位
+- data: {"mobilephone": 15060715012, "pwd": "aaaaaa1952154126415"}
+  expect: {"status": 0, "code": "20108", "data": None, "msg": "密码长度必须为6~18"}
